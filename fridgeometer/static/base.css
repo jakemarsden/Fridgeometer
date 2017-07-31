@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline-width: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 76%;
+    line-height: 24px;
+    color: #444;
+}

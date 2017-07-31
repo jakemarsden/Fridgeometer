@@ -24,5 +24,6 @@ setup(
 
     packages=['fridgeometer'],
     install_requires=[
+        'flask'
     ]
 )
