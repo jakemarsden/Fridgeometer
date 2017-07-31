@@ -13,9 +13,8 @@ tmp_module = imp.new_module('old_model')
 old_model = api.create_model(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO)
 exec(old_model, tmp_module.__dict__)
 
-script = api.make_update_script_for_model(
-    SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO,
-    tmp_module.meta, db.metadata)
+script = api.make_update_script_for_model(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO, tmp_module.meta,
+                                          db.metadata)
 with open(migration, 'wt') as file:
     file.write(script)
 
