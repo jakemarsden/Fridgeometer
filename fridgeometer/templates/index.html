@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 
+
+{% block head %}
+<script type="text/javascript">
+    function deleteFridgeEntry(fridgeEntryId) {
+        console.log("deleteFridgeEntry: fridgeEntryId=" + fridgeEntryId);
+        url = $SCRIPT_ROOT + "/fridge_entry/" + fridgeEntryId;
+        $.ajax({
+            type: "DELETE",
+            url: url,
+            success: function(data) {
+                console.log("deleteFridgeEntry: " + url + ", success=" + data.success);
+                location.reload();
+            },
+            failure: function() {
+                console.log("deleteFridgeEntry: " + url + ", success=false");
+                location.reload();
+            }
+        });
+    }
+</script>
+{% endblock %}
+
+
 {% block content %}
 <ul>
     {% for entry in fridge_entries %}
@@ -16,6 +39,7 @@
     <li class="fridge_entry {{ class_name }} horizontal">
         <div class="name">{{ entry.foodstuff.name }}</div>
         <div class="time">{{ entry.storage_time|pretty_timedelta }}</div>
+        <div class="button" onclick="javascript:deleteFridgeEntry({{ entry.id }});">X</div>
     </li>
     {% endfor %}
 </ul>

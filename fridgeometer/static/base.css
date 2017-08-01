@@ -46,12 +46,23 @@ ul {
 }
 
 .fridge_entry .name {
-    width: 70%;
+    width: 60%;
 }
 
 .fridge_entry .time {
     width: 30%;
     text-align: right;
+}
+
+.fridge_entry .button {
+    width: 10%;
+    text-align: center;
+}
+
+.fridge_entry .button:hover {
+    background-color: #444;
+    color: #ccc;
+    cursor: pointer;
 }
 
 .fridge_entry.fresh .time {
