@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 from fridgeometer import db
 
 
@@ -7,6 +9,10 @@ class FridgeEntry(db.Model):
     timestamp_stored = db.Column(db.DateTime, nullable=False)
 
     foodstuff = db.relationship('Foodstuff')
+
+    @property
+    def storage_time(self) -> timedelta:
+        return datetime.utcnow() - self.timestamp_stored
 
 
 class Foodstuff(db.Model):

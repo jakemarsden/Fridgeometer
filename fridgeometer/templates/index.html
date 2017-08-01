@@ -1,4 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+<ul>
+    {% for entry in fridge_entries %}
+    <li class="fridge_entry horizontal">
+        <div class="name">{{ entry.foodstuff.name }}</div>
+        <div class="time">{{ entry.storage_time.days }} days ago</div>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}
