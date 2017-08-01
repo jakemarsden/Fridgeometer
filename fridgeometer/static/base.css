@@ -53,3 +53,15 @@ ul {
     width: 30%;
     text-align: right;
 }
+
+.fridge_entry.fresh .time {
+    background-color: #3c3;
+}
+
+.fridge_entry.not_fresh .time {
+    background-color: #c93;
+}
+
+.fridge_entry.unusable .time {
+    background-color: #c33;
+}
