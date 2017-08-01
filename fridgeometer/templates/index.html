@@ -5,7 +5,7 @@
     {% for entry in fridge_entries %}
     <li class="fridge_entry horizontal">
         <div class="name">{{ entry.foodstuff.name }}</div>
-        <div class="time">{{ entry.storage_time.days }} days ago</div>
+        <div class="time">{{ entry.storage_time|pretty_timedelta }}</div>
     </li>
     {% endfor %}
 </ul>

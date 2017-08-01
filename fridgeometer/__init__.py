@@ -11,4 +11,4 @@ db = SQLAlchemy(app)
 # noinspection PyUnresolvedReferences
 from fridgeometer.orm import models
 # noinspection PyUnresolvedReferences
-from fridgeometer.ui import views
+from fridgeometer.ui import ui, views
