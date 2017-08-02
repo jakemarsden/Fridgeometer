@@ -26,6 +26,7 @@ setup(
     install_requires=[
         'flask',
         'flask-sqlalchemy',
+        'flask-wtf',
         'pytz',
         'sqlalchemy-migrate',
         'tzlocal'

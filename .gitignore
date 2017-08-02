@@ -2,6 +2,9 @@
 
 /storage/
 
+config_secret.*
+!config_secret.*.template
+
 
 
 
