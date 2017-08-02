@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+{% endblock %}
+
+
+{% block content %}
+<form action="" method="post" name="put_fridge_entry">
+    {{ form.hidden_tag() }}
+    <p>
+        Foodstuff:<br/>
+        {{ form.foodstuff() }}
+    </p>
+    <p>
+        Time Stored:<br/>
+        {{ form.timestamp_stored(value=now().strftime('%Y-%m-%d %H:%M:%S')) }}
+    </p>
+    <p>
+        <input type="submit" value="Add Entry"/>
+    </p>
+</form>
+{% endblock %}
