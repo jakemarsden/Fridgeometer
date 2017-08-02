@@ -8,9 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/base.css"/>
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $SCRIPT_ROOT = {{ request.script_root|tojson }}
-    </script>
+    <script type="text/javascript">$SCRIPT_ROOT = {{ request.script_root|tojson }}</script>
 
     {% block head %}{% endblock %}
 
