@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline-width: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 85%;
+    line-height: 24px;
+    color: #444;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.horizontal::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.horizontal > * {
+    float: left;
+}
+
+
+.fridge_entry {
+    margin: 10px;
+    border: 2px solid #444;
+    border-radius: 2px;
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+.fridge_entry > * {
+    padding: 5px 10px;
+    border-left: 1px solid #444;
+}
+
+.fridge_entry > *:first-child {
+    border-left: none;
+}
+
+.fridge_entry .name {
+    width: 60%;
+}
+
+.fridge_entry .time {
+    width: 30%;
+    text-align: right;
+}
+
+.fridge_entry .button {
+    width: 10%;
+    text-align: center;
+}
+
+.fridge_entry .button:hover {
+    background-color: #444;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.fridge_entry.fresh .time {
+    background-color: #3c3;
+}
+
+.fridge_entry.not_fresh .time {
+    background-color: #c93;
+}
+
+.fridge_entry.unusable .time {
+    background-color: #c33;
+}

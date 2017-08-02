@@ -24,5 +24,8 @@ setup(
 
     packages=['fridgeometer'],
     install_requires=[
+        'flask',
+        'flask-sqlalchemy',
+        'sqlalchemy-migrate'
     ]
 )
