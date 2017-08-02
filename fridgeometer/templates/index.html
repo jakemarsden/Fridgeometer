@@ -38,7 +38,7 @@
     {% endif %}
     <li class="fridge_entry {{ class_name }} horizontal">
         <div class="name">{{ entry.foodstuff.name }}</div>
-        <div class="time">{{ entry.storage_time|pretty_timedelta }}</div>
+        <div class="time">{{ -(entry.storage_time)|pretty_timedelta }}</div>
         <div class="button" onclick="javascript:deleteFridgeEntry({{ entry.id }});">X</div>
     </li>
     {% endfor %}

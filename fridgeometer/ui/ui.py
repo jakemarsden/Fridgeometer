@@ -1,9 +1,9 @@
 from datetime import timedelta
 
 from fridgeometer import app
-from fridgeometer.util import times
+from fridgeometer.util import datetimes
 
 
 @app.template_filter()
 def pretty_timedelta(delta: timedelta) -> str:
-    return times.pretty_timedelta(delta)
+    return datetimes.pretty_timedelta(delta)
